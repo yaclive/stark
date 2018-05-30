@@ -1,0 +1,37 @@
+:root {
+	--dark: #111214;
+	--red: #CC0C32;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.tag {
+	padding: 0 10px;
+	background: #CC0C32;
+	background: var(--red);
+}
+
+body {
+	background: #111214;
+	color: white;
+}
+
+.bar {
+	height: 70px;
+	background: linear-gradient(180deg, #F0F0F0 1.6%, #BFBFBF 96%, #828282 100%);
+	margin-top: 20px;
+}
+
+
+.main {
+	position: relative;
+}
+
+.cart {
+	position: absolute;
+	right: 0;
+}
