@@ -1,0 +1,51 @@
+[
+	{
+		"name": "arc2011",
+		"img": "item1.png",
+		"desc": "To achieve a near tenfold increase in fusion power density, the design makes use of rare-earth barium-copper-oxide (REBCO) superconducting tape for its toroidal field coils. The intense magnetic field allows sufficient confinement of superhot plasma in such a small device.",
+		"stock": "",
+		"tags": ["270 mwe tokamak", "3.3 - 1.1 M radius", "companion parts in stock"]
+	},
+	{
+		"name": "blstr0019",
+		"img": "item2.png",
+		"desc": "Patented repulsor technology: high-density blasts of charged particles, directed by magnets. High density muon beam.",
+		"stock": "low stock",
+		"tags": ["high-density particles", "MUON beam"]
+	},
+	{
+		"name": "badassium",
+		"img": "item3.png",
+		"desc": "information unavailable to public. please enquire with star laboratories for buisness enquiries.",
+		"stock": "",
+		"tags": ["unavailable", "unavailable"]
+	},
+	{
+		"name": "ray0005",
+		"img": "item4.png",
+		"desc": "Device developed for the US Army for vaporisation purposes. Can be installed in a flashlight. Low power draw. No earthly substance is invulnerable.",
+		"stock": "in development",
+		"tags": ["low power draw", "> 5mWh draw", "small form-factor"]
+	},
+	{
+		"name": "blstr0019 components",
+		"img": "part1.png",
+		"desc": "Replacement parts for the blstr0019 mk.2. Parts can be ordered separately or together reducing shipping costs.",
+		"stock": "low stock",
+		"tags": ["blstr0019 mk.2"]
+	},
+	{
+		"name": "blstr0019 housing",
+		"img": "part2.png",
+		"desc": "Main body housing for the blstr0019 mk.2. Housing machined subtractively from badassium-enriched aluminium stock. 2 housings per order.",
+		"stock": "low stock",
+		"tags": ["blstr0019 mk.2", "badassium-enriched aluminium stock"]
+	},
+	{
+		"name": "cf20tc transformer chip",
+		"img": "part3.png",
+		"desc": "blstr0019 replacement cf20tc transformer chip. Minimum 5 pcs. per order. To reduce overheading during operation, consider using termal compounding when re-installing chips.",
+		"stock": "",
+		"tags": ["thermal compound advised"]
+	}
+]

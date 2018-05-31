@@ -4,3 +4,7 @@
 	line-height: 16px;
 	margin-bottom: 25px;
 }
+
+.item-details .stock {
+	display: none;
+}

@@ -14,9 +14,9 @@
 			<div class="row align-items-center">
 				<div class="logo"></div>
 				<div class="nav row no-gutters">
-					<div class="nav-item col-4">defence</div>
-					<div class="nav-item col-4">services</div>
-					<div class="nav-item col-4">contact</div>
+					<div class="nav-item col-4"><a href="index.html">defence</a></div>
+					<div class="nav-item col-4"><a href="parts.html">parts</a></div>
+					<div class="nav-item col-4"><a href="contact.html">contact</a></div>
 				</div>
 				<div class="cart tag">0 items in cart</div>
 			</div>
@@ -27,27 +27,54 @@
 			<div class="col-sm-6">
 				<div class="item">
 					<div class="item-image">
-						<img src="img/item1.png" alt="Product image">
-						<div class="stock tag">low stock</div>
+						<img id="img" alt="Product image">
+						<div id="stock" class="stock tag">000</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<h1>arc2011</h1>
-				<ul class="sub-header">
-					<li>not suitable for domestic use</li>
-					<li>arc2010 parts in stock</li>
+				<h1 id="name">000</h1>
+				<ul id="tags" class="sub-header">
+					<li>000</li>
+					<li>000</li>
+					<li>000</li>
 				</ul>
 				<div class="col break">+ + +</div>
-				<div class="desc">
-					To achieve a near tenfold increase in fusion power density, the design makes use of rare-earth barium-copper-oxide (REBCO) superconducting tape for its toroidal field coils. The intense magnetic field allows sufficient confinement of superhot plasma in such a small device. In theory, the achievable fusion power density of a reactor is proportional to the fourth power of the magnetic field intensity.
-				</div>
+				<div id="desc" class="desc">000</div>
 				<a href="contact.html" class="btn btn-light" role="button">contact stark industries for quote</a>
 			</div>
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script>
+		var itemID = parseInt(window.location.hash.slice(1), 10);
+
+		if (itemID === "") {
+			window.location.replace("index.html"); // Redirect on no item reference
+		}
+		else {
+			$.getJSON("json/items.json", function(items) {
+				item = items[itemID];
+
+				if (item === undefined) window.location.replace("index.html"); // Redirect on no item reference
+
+				$("#img").attr("src", "img/" + item.img);
+				$("#name").html(item.name);
+				$("#desc").html(item.desc);
+				if (item.stock != "") $("#stock").html(item.stock).show();
+
+				// Build tags
+				$("#tags").empty();
+				for (var i = 0; i < item.tags.length; i++) {
+					var tag = $("<li></li>");
+
+					tag.html(item.tags[i]);
+					$("#tags").append(tag);
+				}
+			});
+		}
+	</script>
 </body>
 </html>
